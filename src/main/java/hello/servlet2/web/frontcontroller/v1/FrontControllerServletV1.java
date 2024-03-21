@@ -37,6 +37,7 @@ public class FrontControllerServletV1 extends HttpServlet {
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
             return;
         }
+
         controller.process(request, response);
     }
 }
