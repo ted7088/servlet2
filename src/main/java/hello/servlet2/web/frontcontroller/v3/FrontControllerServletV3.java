@@ -28,9 +28,7 @@ public class FrontControllerServletV3 extends HttpServlet {
         controllerMap.put("/front-controller/v3/members", new MemberListControllerV3());
     }
     @Override
-    protected void service(HttpServletRequest request, HttpServletResponse
-            response)
-            throws ServletException, IOException {
+    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String requestURI = request.getRequestURI();
         ControllerV3 controller = controllerMap.get(requestURI);
         if (controller == null) {
